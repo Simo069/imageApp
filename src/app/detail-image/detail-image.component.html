@@ -1,0 +1,21 @@
+<div class="continer mx-auto px-8 max-w-screen-xl my-20 card  py-16 shadow-lg">
+  <div class="flex  flex-col">
+    <div class="flex flex-col gap-4">
+      <h1 class="text-lg font-semibold text-center">title :<span class="font-bold text-lg"> {{image.tags}}</span></h1>
+      <div class="flex flex-row items-center gap-2">
+        <div class="w-16 h-16">
+          <img class="w-full h-full rounded-full object-cover" src={{image.userImageURL}} />
+        </div>
+
+        <h2> By <span class="font-bold">{{image.user}}</span> </h2>
+      </div>
+
+      <p class="m-2">size :  {{image.imageWidth}} x {{image.imageHeight}}</p>
+    </div>
+    <div class="image">
+      <div class="w-[60%] h-[50%] ">
+        <img class="w-full h-full object-cover" src={{image.largeImageURL}}/>
+      </div>
+    </div>
+  </div>
+</div>
