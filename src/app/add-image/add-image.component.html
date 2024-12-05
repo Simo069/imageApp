@@ -1,0 +1,298 @@
+<div class="container my-16 mx-auto max-w-4xl px-4">
+  <form class="bg-white shadow-2xl rounded-xl p-10 space-y-6" id="addImageForm">
+    <h2 class="text-3xl font-extrabold text-center text-gray-800 mb-6">Ajouter Image</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- First Column -->
+      <div class="space-y-4">
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="pageURL">Page URL</label>
+          <input
+          [(ngModel)]="pageURL"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="url"
+            id="pageURL"
+            name="pageURL"
+            placeholder="https://pixabay.com/..."
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="type">Type</label>
+          <input
+          [(ngModel)]="type"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="text"
+            id="type"
+            name="type"
+            placeholder="photo"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="tags">Tags</label>
+          <input
+            [(ngModel)]="tags"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="text"
+            id="tags"
+            name="tags"
+            placeholder="mosque, architecture, islam"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="previewURL">Preview URL</label>
+          <input
+          [(ngModel)]="previewURL"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="url"
+            id="previewURL"
+            name="previewURL"
+            placeholder="https://cdn.pixabay.com/..."
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="previewWidth">Preview Width</label>
+          <input
+          [(ngModel)]="previewWidth"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="number"
+            id="previewWidth"
+            name="previewWidth"
+            placeholder="150"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="previewHeight">Preview Height</label>
+          <input
+          [(ngModel)]="previewHeight"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="number"
+            id="previewHeight"
+            name="previewHeight"
+            placeholder="101"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="webformatURL">Webformat URL</label>
+          <input
+          [(ngModel)]="webformatURL"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="url"
+            id="webformatURL"
+            name="webformatURL"
+            placeholder="https://pixabay.com/get/..."
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="webformatWidth">Webformat Width</label>
+          <input
+          [(ngModel)]="webformatWidth"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="number"
+            id="webformatWidth"
+            name="webformatWidth"
+            placeholder="640"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="webformatHeight">Webformat Height</label>
+          <input
+          [(ngModel)]="webformatHeight"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="number"
+            id="webformatHeight"
+            name="webformatHeight"
+            placeholder="432"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="largeImageURL">Large Image URL</label>
+          <input
+          [(ngModel)]="largeImageURL"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="url"
+            id="largeImageURL"
+            name="largeImageURL"
+            placeholder="https://pixabay.com/get/..."
+            required
+          >
+        </div>
+      </div>
+
+      <!-- Second Column -->
+      <div class="space-y-4">
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="imageWidth">Image Width</label>
+          <input
+          [(ngModel)]="imageWidth"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="number"
+            id="imageWidth"
+            name="imageWidth"
+            placeholder="3150"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="imageHeight">Image Height</label>
+          <input
+          [(ngModel)]="imageHeight"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="number"
+            id="imageHeight"
+            name="imageHeight"
+            placeholder="2127"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="imageSize">Image Size (bytes)</label>
+          <input
+          [(ngModel)]="imageSize"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="number"
+            id="imageSize"
+            name="imageSize"
+            placeholder="2021132"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="views">Views</label>
+          <input
+          [(ngModel)]="views"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="number"
+            id="views"
+            name="views"
+            placeholder="1270"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="downloads">Downloads</label>
+          <input
+          [(ngModel)]="downloads"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="number"
+            id="downloads"
+            name="downloads"
+            placeholder="903"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="collections">Collections</label>
+          <input
+          [(ngModel)]="collections"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="number"
+            id="collections"
+            name="collections"
+            placeholder="148"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="likes">Likes</label>
+          <input
+          [(ngModel)]="likes"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="number"
+            id="likes"
+            name="likes"
+            placeholder="10"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="comments">Comments</label>
+          <input
+          [(ngModel)]="comments"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="number"
+            id="comments"
+            name="comments"
+            placeholder="1"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="user_id">User ID</label>
+          <input
+          [(ngModel)]="user_id"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="number"
+            id="user_id"
+            name="user_id"
+            placeholder="25801384"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="user">User</label>
+          <input
+          [(ngModel)]="user"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="text"
+            id="user"
+            name="user"
+            placeholder="Matte1974"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="block text-sm font-medium text-gray-700 mb-2" for="userImageURL">User Image URL</label>
+          <input
+          [(ngModel)]="userImageURL"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+            type="url"
+            id="userImageURL"
+            name="userImageURL"
+            placeholder="https://cdn.pixabay.com/user/..."
+            required
+          >
+        </div>
+      </div>
+    </div>
+    <div class="mt-8">
+      <button
+      (click)="addImage()"
+        type="submit"
+        class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold
+              hover:bg-blue-700 transition duration-300
+              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50
+              transform hover:scale-[1.02] active:scale-[0.98]"
+      >
+        Enregistrer
+      </button>
+    </div>
+  </form>
+</div>

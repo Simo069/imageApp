@@ -31,5 +31,8 @@ export class NavBarComponent implements OnInit {
     this.searchService.updateSearchTerm(term);
     this.router.navigate(['images']);
   }
-
+  addImage(){
+    console.log("test 1")
+    this.router.navigate(['images/add']);
+  }
 }

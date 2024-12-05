@@ -1,4 +1,4 @@
-<nav class="bg-white border-gray-200 dark:bg-gray-900 border">
+<!-- <nav class="bg-white border-gray-200 dark:bg-gray-900 border">
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-around mx-auto p-4"
   >
@@ -64,4 +64,29 @@
       </ul>
     </div>
   </div>
-</nav>
+
+
+</nav> -->
+
+<div class="container mx-auto px-4">
+  <div class="header bg-gradient-to-tr from-[#1fb689] via-[#004845] to-[#213158] text-white text-center p-5 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold">Recherche de Photos</h1>
+    <!-- <button class="btn bg-green-400" (click)="addImage()">Add Image</button> -->
+  </div>
+  <div class="search-bar mt-8 flex items-center gap-4 bg-white p-3 rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+    <label for="keyword" class="font-bold text-[#213158] text-lg">Mot Clé:</label>
+    <input
+    [(ngModel)]="searchInput"
+      type="text"
+      id="keyword"
+      placeholder="Entrez un mot clé..."
+      class="flex-1 px-5 py-2 border-2 border-transparent rounded-full outline-none text-base transition-all duration-300 bg-gray-100 focus:border-[#09D1C7] focus:bg-white"
+    />
+    <button
+      class="bg-[#09D1C7] text-white px-6 py-2 rounded-full text-base shadow-md transition-all duration-300 hover:bg-[#213158] hover:-translate-y-1" (click)="searchItem()">
+      Chercher
+    </button>
+    <button class="bg-[#1d3321] text-white px-6 py-2 rounded-full text-base shadow-md transition-all duration-300 hover:bg-[#213158] hover:-translate-y-1" (click)="addImage()">ajouter image</button>
+
+  </div>
+</div>

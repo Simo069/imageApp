@@ -23,4 +23,11 @@ export class DisplayImageService {
   deleteImage(imageId:number):Observable<void>{
     return this.httpClient.delete<void>(`${this.apiUrl}/${imageId}`);
   }
+  addImage(image:Images):Observable<Images>{
+    return this.httpClient.post<Images>(this.apiUrl,image);
+  }
+  modifieImage(image:Images, idImage:any):Observable<Images>{
+    return this.httpClient.put<Images>(`${this.apiUrl}/${idImage}`,image)
+  }
+
 }

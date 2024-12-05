@@ -1,20 +1,92 @@
-<div class="continer mx-auto px-8 max-w-screen-xl my-20 card  py-16 shadow-lg">
-  <div class="flex  flex-col">
-    <div class="flex flex-col gap-4">
-      <h1 class="text-lg font-semibold text-center">title :<span class="font-bold text-lg"> {{image.tags}}</span></h1>
-      <div class="flex flex-row items-center gap-2">
-        <div class="w-16 h-16">
+<!-- <div class="continer mx-auto px-8 max-w-screen-xl my-20 card  py-16 shadow-lg">
+  <div class="flex ">
+    <div class="image w-1/2">
+      <div class="w-[95%] h-full ">
+        <img class="w-full h-full object-cover" src={{image.largeImageURL}}/>
+      </div>
+    </div>
+    <div class="flex flex-col gap-4 w-1/2 flex-wrap text-wrap"> -->
+      <!-- <h1 class="text-lg font-semibold">title :<span class="font-bold text-lg"> {{image.tags}}</span></h1> -->
+      <!-- <div class="flex flex-row items-center gap-2">
+        <div class="w-10 h-10">
           <img class="w-full h-full rounded-full object-cover" src={{image.userImageURL}} />
         </div>
-
         <h2> By <span class="font-bold">{{image.user}}</span> </h2>
       </div>
-
-      <p class="m-2">size :  {{image.imageWidth}} x {{image.imageHeight}}</p>
+      <div class="text-wrap ">
+      <p class="m-2"> pageURL :  {{image.pageURL}}</p>
+      <p class="m-2"> type : {{image.type}}</p>
+      <p class="m-2"> tags : {{image.tags}}</p>
+      <p class="m-2"> previewURL : {{image.previewURL}}</p>
+      <p class="m-2"> previewWidth : {{image.previewWidth}}</p>
+      <p class="m-2"> previewHeight : {{image.previewHeight}}</p>
+      <p class="m-2"> webformatURL : {{image.webformatURL}}</p>
+      <p class="m-2"> webformatWidth : {{image.webformatWidth}}</p>
+      <p class="m-2"> webformatHeight : {{image.webformatHeight}}</p>
+      <p class="m-2"> largeImageURL : {{image.largeImageURL}}</p>
+      <p class="m-2"> imageWidth : {{image.imageWidth}}</p>
+      <p class="m-2"> imageHeight : {{image.imageHeight}}</p>
+      <p class="m-2"> imageSize : {{image.imageSize}}</p>
+      <p class="m-2"> views : {{image.views}}</p>
+      <p class="m-2"> downloads : {{image.downloads}}</p>
+      <p class="m-2"> collections : {{image.collections}}</p>
+      <p class="m-2"> likes : {{image.likes}}</p>
+      <p class="m-2"> comments : {{image.comments}}</p>
+      <p class="m-2"> user_id : {{image.user_id}}</p>
+      <p class="m-2"> user : {{image.user}}</p>
+      <p class="m-2"> userImageURL : {{image.userImageURL}}</p>
+      </div>
     </div>
-    <div class="image">
-      <div class="w-[60%] h-[50%] ">
-        <img class="w-full h-full object-cover" src={{image.largeImageURL}}/>
+  </div>
+</div> -->
+<div class="container mx-auto px-8 max-w-screen-xl my-20 card py-16 shadow-lg">
+  <div class="flex">
+    <!-- Image Section -->
+    <div class="image w-1/2">
+      <div class="w-[95%] h-full">
+        <img class="w-full h-full object-cover" src={{image.largeImageURL}} />
+      </div>
+    </div>
+
+    <!-- Text Section -->
+    <div class="flex flex-col gap-4 w-1/2 flex-wrap text-wrap">
+      <!-- Auteur -->
+      <div class="flex flex-row items-center gap-2">
+        <div class="w-10 h-10">
+          <img class="w-full h-full rounded-full object-cover" src={{image.userImageURL}} />
+        </div>
+        <h2>By <span class="font-bold">{{image.user}}</span></h2>
+      </div>
+
+      <!-- Détails avec largeur limitée -->
+      <div class="text-wrap max-w-[600px]">
+        <p class="m-2  break-words "><span class="font-bold text-xl ">PageURL :</span> {{image.pageURL}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">Type : </span>{{image.type}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">Tags : </span>{{image.tags}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">PreviewURL : </span>{{image.previewURL}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">PreviewWidth :</span> {{image.previewWidth}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">PreviewHeight :</span> {{image.previewHeight}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">WebformatURL :</span> {{image.webformatURL}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">WebformatWidth :</span> {{image.webformatWidth}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">WebformatHeight :</span> {{image.webformatHeight}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">LargeImageURL :</span> {{image.largeImageURL}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">ImageWidth :</span> {{image.imageWidth}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">ImageHeight :</span> {{image.imageHeight}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">ImageSize :</span> {{image.imageSize}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">Views :</span> {{image.views}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">Downloads :</span> {{image.downloads}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">Collections :</span> {{image.collections}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">Likes :</span> {{image.likes}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">Comments :</span> {{image.comments}}</p>
+        <p class="m-2  break-words "><span class="font-bold text-xl ">User ID :</span> {{image.user_id}}</p>
+      </div>
+      <div class="flex gap-4 justify-end font-bold">
+        <div class="update ">
+          <button class="btn p-2 bg-blue-600 text-white rounded-lg " (click)="modifierImage(image.id)">Modifier</button>
+        </div>
+        <div class="delete">
+          <button class="btn bg-red-500 text-white p-2 rounded-lg" (click)="confirmDelete(image.id)">Supprimer</button>
+        </div>
       </div>
     </div>
   </div>
